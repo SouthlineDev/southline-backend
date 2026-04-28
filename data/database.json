@@ -1,0 +1,54 @@
+{
+  "codes": {
+    "SL-CIV-LM95": {
+      "code": "SL-CIV-LM95",
+      "robloxUsername": "SceloHart",
+      "discord": "@scelo",
+      "discordId": null,
+      "role": "Civilian",
+      "faction": "None",
+      "department": "None",
+      "permanentId": 132,
+      "factionLeader": false,
+      "status": "Unused",
+      "used": false,
+      "usedByRobloxUserId": null,
+      "usedByRobloxUsername": null,
+      "issuedBy": "Owner",
+      "issuedAt": "2026-04-28T11:15:25.399Z",
+      "activatedAt": null,
+      "voidedAt": null,
+      "voidReason": null
+    }
+  },
+  "users": {},
+  "logs": [
+    {
+      "id": "6df1e7f9-f8ef-4605-8a32-59ea74a3dd1a",
+      "type": "CODE_CREATED",
+      "data": {
+        "code": "SL-CIV-LM95",
+        "robloxUsername": "SceloHart",
+        "discord": "@scelo",
+        "role": "Civilian",
+        "faction": "None",
+        "department": "None",
+        "permanentId": 132,
+        "issuedBy": "Owner"
+      },
+      "createdAt": "2026-04-28T11:15:25.419Z"
+    }
+  ],
+  "nextIds": {
+    "Civilian": 133,
+    "Police": 232,
+    "EMS": 332,
+    "Staff": 432,
+    "North Ave": 532,
+    "Southline 47": 632,
+    "Eastgate": 732,
+    "Westbrook": 832,
+    "River Park": 932,
+    "Crown Heights": 982
+  }
+}
