@@ -289,8 +289,9 @@ app.post("/api/character/save", requireRoblox, async (req, res) => {
       skinName: cleanText(appearance.skinName, "Brown"),
       skinIndex: Number(appearance.skinIndex || 1),
 
-      heightName: cleanText(appearance.heightName, "Average"),
-      heightIndex: Number(appearance.heightIndex || 2),
+      heightName: cleanText(appearance.heightName, "100%"),
+      heightIndex: Number(appearance.heightIndex || 6),
+      heightScale: Number(appearance.heightScale || 1),
 
       faceName: cleanText(appearance.faceName, "Default"),
       faceIndex: Number(appearance.faceIndex || 1),
