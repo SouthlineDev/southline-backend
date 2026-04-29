@@ -277,11 +277,38 @@ app.post("/api/character/save", requireRoblox, async (req, res) => {
     });
   }
 
+  const appearance = req.body.appearance || {};
+
   const character = {
     firstName: cleanText(req.body.firstName, "Unknown"),
     lastName: cleanText(req.body.lastName, "Citizen"),
     age: cleanText(req.body.age, "18"),
     gender: cleanText(req.body.gender, "Unknown"),
+
+    appearance: {
+      skinName: cleanText(appearance.skinName, "Brown"),
+      skinIndex: Number(appearance.skinIndex || 1),
+
+      heightName: cleanText(appearance.heightName, "Average"),
+      heightIndex: Number(appearance.heightIndex || 2),
+
+      faceName: cleanText(appearance.faceName, "Default"),
+      faceIndex: Number(appearance.faceIndex || 1),
+      faceId: cleanText(appearance.faceId, ""),
+
+      hairName: cleanText(appearance.hairName, "Default"),
+      hairIndex: Number(appearance.hairIndex || 1),
+      hairId: cleanText(appearance.hairId, ""),
+
+      shirtName: cleanText(appearance.shirtName, "Default"),
+      shirtIndex: Number(appearance.shirtIndex || 1),
+      shirtId: cleanText(appearance.shirtId, ""),
+
+      pantsName: cleanText(appearance.pantsName, "Default"),
+      pantsIndex: Number(appearance.pantsIndex || 1),
+      pantsId: cleanText(appearance.pantsId, "")
+    },
+
     createdAt: profile.characterCreated ? profile.character?.createdAt || nowIso() : nowIso(),
     updatedAt: nowIso()
   };
@@ -310,7 +337,9 @@ app.post("/api/character/save", requireRoblox, async (req, res) => {
       { name: "Roblox", value: profile.robloxUsername || "Unknown", inline: true },
       { name: "Server ID", value: String(profile.serverId), inline: true },
       { name: "Role", value: profile.role || "Civilian", inline: true },
-      { name: "Faction", value: profile.faction || "None", inline: true }
+      { name: "Faction", value: profile.faction || "None", inline: true },
+      { name: "Shirt", value: character.appearance.shirtName || "Unknown", inline: true },
+      { name: "Pants", value: character.appearance.pantsName || "Unknown", inline: true }
     ]
   );
 
